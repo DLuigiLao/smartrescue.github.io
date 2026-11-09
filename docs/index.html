@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Rescue | LSPU College of Computer Studies</title>
+  <meta name="description" content="Smart Rescue: a web-based and mobile emergency reporting and response management system for MDRRMO Santa Cruz, Laguna, with automated incident prioritization. A capstone research project of the LSPU College of Computer Studies.">
+  <meta name="theme-color" content="#1e3a5f">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="layout">
+    <header class="sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="#home">
+          <img src="assets/favicon.png" alt="" width="64" height="64">
+          <span>Smart Rescue</span>
+        </a>
+        <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="toc">
+          Contents
+        </button>
+      </div>
+      <nav id="toc" class="toc" aria-label="Contents">
+        <p class="toc-label">Contents</p>
+        <ol>
+          <li><a href="#home"><span class="toc-num">00</span>Title</a></li>
+          <li><a href="#team"><span class="toc-num">01</span>Research Team</a></li>
+          <li><a href="#problem"><span class="toc-num">02</span>Problem Statement</a></li>
+          <li><a href="#objectives"><span class="toc-num">03</span>Objectives</a></li>
+          <li><a href="#methodology"><span class="toc-num">04</span>Methodology</a></li>
+          <li><a href="#features"><span class="toc-num">05</span>System Features</a></li>
+          <li><a href="#links"><span class="toc-num">06</span>Project Links</a></li>
+        </ol>
+        <p class="toc-foot">LSPU &middot; College of Computer Studies</p>
+      </nav>
+    </header>
+
+    <main id="main">
+
+      <section id="home" class="title-page" aria-labelledby="title">
+        <div class="seals">
+          <img src="assets/logos/lspu.png" alt="Laguna State Polytechnic University seal" width="256" height="256">
+          <img src="assets/logos/mdrrmo.png" alt="MDRRMO Santa Cruz, Laguna seal" width="256" height="256">
+          <img class="seal-wide" src="assets/logos/smart-rescue.png" alt="Smart Rescue logo" width="512" height="312">
+        </div>
+
+        <p class="institution">
+          <span>Laguna State Polytechnic University</span>
+          <span>College of Computer Studies</span>
+          <span>Santa Cruz, Laguna</span>
+        </p>
+
+        <p class="kicker">Capstone Research Project</p>
+        <h1 id="title">SMART RESCUE: A WEB-BASED AND MOBILE EMERGENCY REPORTING AND RESPONSE MANAGEMENT SYSTEM FOR MDRRMO IN SANTA CRUZ, LAGUNA WITH AUTOMATED INCIDENT PRIORITIZATION</h1>
+
+        <p class="program">Bachelor of Science in Information Technology major in Web and Mobile Application Development</p>
+
+        <p class="byline">
+          <span>Janelle M. Clemeno</span>
+          <span>Don Luigi A. Lao</span>
+          <span>Krystal Margareth B. Villanueva</span>
+        </p>
+        <p class="byline-adviser">Adviser: Mia V. Villarica, DIT</p>
+
+        <div class="actions">
+          <a class="action action-primary" href="https://idyllic-taffy-7282b6.netlify.app/" target="_blank" rel="noopener noreferrer">Download the Android App (APK)<span class="arrow" aria-hidden="true">&#8599;</span></a>
+          <a class="action" href="https://luigi-portfolio-delta.vercel.app/videos" target="_blank" rel="noopener noreferrer">Watch the System Demo<span class="arrow" aria-hidden="true">&#8599;</span></a>
+        </div>
+      </section>
+
+      <section id="team" class="section" aria-labelledby="team-h">
+        <header class="section-head">
+          <span class="section-num">01</span>
+          <h2 id="team-h">Research Team</h2>
+        </header>
+        <dl class="people">
+          <div class="person">
+            <dt>Janelle M. Clemeno</dt>
+            <dd>Team Lead, Researcher</dd>
+          </div>
+          <div class="person">
+            <dt>Don Luigi A. Lao</dt>
+            <dd>Full-Stack Developer and AI Engineer</dd>
+          </div>
+          <div class="person">
+            <dt>Krystal Margareth B. Villanueva</dt>
+            <dd>Researcher, Front-end Developer</dd>
+          </div>
+          <div class="person person-adviser">
+            <dt>Mia V. Villarica, DIT</dt>
+            <dd>Research Adviser</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="problem" class="section" aria-labelledby="problem-h">
+        <header class="section-head">
+          <span class="section-num">02</span>
+          <h2 id="problem-h">Problem Statement</h2>
+        </header>
+        <div class="prose">
+          <p>The Municipal Disaster Risk Reduction and Management Office (MDRRMO) plays an essential role in strengthening disaster preparedness, risk reduction, emergency communication, and response operations at the municipal level. Its responsibilities are anchored in the Philippine Disaster Risk Reduction and Management Act of 2010 or Republic Act No. 10121, which provides the legal framework for disaster risk reduction and management in the Philippines. The law mandates local government units to establish a Local Disaster Risk Reduction and Management Office (LDRRMO) responsible for coordinating and implementing disaster risk reduction and management programs within their respective jurisdictions.</p>
+          <p>Traditional reporting through voice calls and other communication channels requires the manual collection, recording, verification, and dispatch of incident information. Studies on emergency reporting have identified challenges involving non-standardized reporting, information management, communication, and coordination that may affect emergency response operations. Mobile technology offers a means of improving the collection and dissemination of emergency information. For instance, Edillo et al. (2017) developed a mobile-based emergency reporting application for the Philippine National Police Emergency Hotline 911 that utilized smartphone geolocation to provide location information to emergency personnel and reduce the need for manual data collection.</p>
+          <p>Similarly, Rey et al. (2024) developed &ldquo;Mamamayan&rdquo;, a mobile community-based emergency reporting and notification system for Makati City in the Philippines. The system demonstrates the feasibility of using mobile technology to enable residents to report emergencies and notify authorities. However, the operational needs of a disaster management office may extend beyond emergency reporting alone.</p>
+          <p>Incoming reports must be processed, prioritized, assigned to appropriate responders, and monitored throughout the response. While existing systems provide functions such as citizen reporting, notifications, mapping, and emergency information management, these are often handled separately. This highlights the need for an integrated platform that combines incident reporting, location information, prioritization, responder coordination, and centralized monitoring in one workflow.</p>
+          <p>To address this need, the researchers propose &ldquo;Smart Rescue: A Web-based and Mobile Emergency Reporting and Response Management System for MDRRMO in Santa Cruz, Laguna with Automated Incident Prioritization.&rdquo; The system provides a web-based dashboard for MDRRMO responder to receive, monitor, prioritize, and manage incidents, while its mobile platform allows users to submit emergency reports with incident and location details. It also supports emergency operations through real-time notifications, responder coordination, duplicate-report detection, and analytics.</p>
+          <p>The study aims to consolidate these technologies into a unified emergency reporting and response management process that supports the operational requirements of the MDRRMO of Santa Cruz, Laguna. The developed system will undergo functional and simulation testing, as well as user acceptance and usability evaluation, to determine its capability to support emergency reporting, incident prioritization, response coordination, location-based services, and centralized incident management.</p>
+        </div>
+      </section>
+
+      <section id="objectives" class="section" aria-labelledby="objectives-h">
+        <header class="section-head">
+          <span class="section-num">03</span>
+          <h2 id="objectives-h">Objectives</h2>
+        </header>
+
+        <h3 class="sub">General Objective</h3>
+        <div class="prose statement">
+          <p>The research study aims to improve and modernise the existing emergency monitoring system through the development, testing and evaluation of &ldquo;Smart Rescue: A Web-Based and Mobile Emergency Reporting and Response Management System with Automated Incident Prioritization&rdquo; for the Municipal Disaster Risk Reduction and Management Office (MDRRMO) of Santa Cruz, Laguna.</p>
+          <p>In particular, the aim is to improve emergency reporting, response coordination and incident management through a centralized, real-time and intelligent platform.</p>
+        </div>
+
+        <h3 class="sub">Specific Objectives</h3>
+        <ol class="objectives">
+          <li>To design and develop an improved web-based and mobile emergency response system with improved features such as secure user authentication, GPS-based emergency reporting with photo uploads, automated incident prioritization, real-time tracking and notifications, admin dashboard, response team coordination, analytics and report generation and duplicate report detection to improve efficiency and decision making.</li>
+          <li>To test the developed system in terms of its ability to:
+            <ol type="a">
+              <li>Handle simultaneous emergency reports from multiple users</li>
+              <li>Ensure reliable transmission of alerts via internet and mobile networks</li>
+              <li>Support real-time monitoring and response coordination</li>
+              <li>Accurately identify and prioritize incidents using automated mechanisms</li>
+              <li>Provide location-based services, including nearby emergency facilities</li>
+              <li>Notify and coordinate multiple emergency responders efficiently</li>
+            </ol>
+          </li>
+          <li>Conduct simulation testing of the developed system under simulated emergency scenarios to assess its ability to:
+            <ol type="a">
+              <li>Receive and process emergency reports from citizens</li>
+              <li>Automatically prioritize incidents according to their reported conditions</li>
+              <li>Assign and coordinate appropriate responders</li>
+              <li>Provide real-time incident status updates and notifications</li>
+              <li>Track the reported incident location using GPS</li>
+              <li>Facilitate the overall coordination and response process during simulated emergency situations.</li>
+            </ol>
+          </li>
+          <li>To evaluate the developed system based on the Technology Acceptance Model (TAM) in terms of:
+            <ol type="a">
+              <li>External Variables</li>
+              <li>Perceived Ease of Use</li>
+              <li>Perceived Usefulness</li>
+              <li>Attitude Toward Using</li>
+              <li>Behavioral Intention to Use</li>
+              <li>Actual System Use</li>
+            </ol>
+          </li>
+        </ol>
+      </section>
+
+      <section id="methodology" class="section" aria-labelledby="methodology-h">
+        <header class="section-head">
+          <span class="section-num">04</span>
+          <h2 id="methodology-h">Methodology</h2>
+        </header>
+        <div class="prose">
+          <p>This section explains the overall methodology and describes the steps to conduct the capstone project. It describes the methodical and chronological process of finding the study participants, obtaining the requirements, creating the system, implementing the software with the relevant technologies and performing the technical and user assessments of the completed platform.</p>
+        </div>
+
+        <h3 class="sub"><span class="sub-num">4.1</span>Research and Fact-Finding Activities</h3>
+        <div class="prose">
+          <p>To develop a clear empirical base and to identify the functional and operational requirements of the proposed system, the researchers conducted the following fact-finding activities in sequence: direct observation, senior informant interview, and survey administration.</p>
+        </div>
+        <dl class="activities">
+          <div>
+            <dt>Direct Observation</dt>
+            <dd>The researchers will conduct direct observation of the staff of the Municipal Disaster Risk Reduction and Management Office (MDRRMO). The activity will centre on the observation of personnel&rsquo;s handling of incoming public incident reports, assessment of crisis situations, and management of event dispatching under manual protocols. By monitoring these procedures in real-time, the researchers will be able to detect operational bottlenecks and establish the need for an automated emergency reporting web service.</dd>
+          </div>
+          <div>
+            <dt>Senior Informant Interview</dt>
+            <dd>Face-to-face consultation will be performed with MDRRMO Director ENP. Joshua Federick J. Vitaliz and senior administrative officials. The purpose of the exercise will be to obtain qualitative information on institutional issues, particular workflow limitations, data exchange mechanisms, and possible hurdles to the uptake of digital solutions by users.</dd>
+          </div>
+          <div>
+            <dt>Survey Administration</dt>
+            <dd>Structured survey questionnaires will be consistently delivered to the target respondents to collect quantitative data on user input, behavioural patterns, and acceptability indicators. This will offer quantifiable insights on the reporting behaviour of the community and the expectations of the system.</dd>
+          </div>
+          <div>
+            <dt>Documentary and Literature Review</dt>
+            <dd>The researchers will conduct an exhaustive review of the physical literature at the LSPU Library and online academic publications. This assessment will provide technological benchmarks, quality standards, and frameworks for integration of apps related to emergency management.</dd>
+          </div>
+          <div>
+            <dt>Brainstorming</dt>
+            <dd>Following the emphasis on software development team dynamics by Strode et al. (2022), the study team will perform structured brainstorming sessions. These conversations will be collaborative in nature, to synthesise the data collected from observations and interviews, map out system goals, and identify the fundamental functional requirements for the suggested output.</dd>
+          </div>
+        </dl>
+
+        <h3 class="sub"><span class="sub-num">4.2</span>System Development Activities</h3>
+        <div class="prose">
+          <p>To ensure the successful development and deployment of the proposed emergency reporting and management web application, the researchers will follow a planned sequence of development activities aligned with the Agile framework. The major activities to be performed during the project life cycle will be as follows:</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h4>Planning Activities</h4>
+            <p>The researchers will conduct preliminary investigations, workflow analysis, and requirement-gathering meetings with staff from the Municipal Disaster Risk Reduction and Management Office (MDRRMO). These activities will establish the basic system objectives, identify operational bottlenecks in current reporting procedures, and specify the functional requirements and project scope.</p>
+          </li>
+          <li>
+            <h4>System Design Activities</h4>
+            <p>Technical blueprints and visual representations of the proposed system will be prepared. The researchers will develop database models, system flow diagrams, system architecture diagrams, and responsive user-interface wireframes for both MDRRMO administrative users and community responders.</p>
+          </li>
+          <li>
+            <h4>Software Construction and Development Activities</h4>
+            <p>The researchers will iteratively create front-end and back-end application components. Development efforts will focus on the development of fundamental system modules such as automated incident reporting, real-time alarm dispatching, geospatial data mapping, and administrative resource management.</p>
+          </li>
+          <li>
+            <h4>System Testing and Debugging Activities</h4>
+            <p>Continuous testing will be conducted to assess the functionality, security, compatibility, and performance of the application modules. Bugs, interface alignment failures, and database connection issues identified during the test cycles will be addressed before release.</p>
+          </li>
+          <li>
+            <h4>User Evaluation and Deployment Activities</h4>
+            <p>The developed application will be deployed to a web server environment for technical and user acceptance testing (UAT). Evaluation questionnaires will be distributed to target end-users and MDRRMO responders to evaluate system usability, efficiency, and overall acceptance.</p>
+          </li>
+          <li>
+            <h4>System Launch and User Onboarding Activities</h4>
+            <p>The final adjustments to the system based on the evaluation feedback will lead to the preparation of the system for operational launch. Orientation and training sessions will be organized for the MDRRMO workers, together with user documentation, to ensure smooth adoption and operation of the system.</p>
+          </li>
+        </ol>
+
+        <h3 class="sub"><span class="sub-num">4.3</span>System Testing and Evaluation</h3>
+        <div class="tests">
+          <div class="test">
+            <h4>Functional Testing</h4>
+            <p>The system is tested on its ability to:</p>
+            <ul>
+              <li>Handle simultaneous emergency reports from multiple users</li>
+              <li>Ensure reliable transmission of alerts via internet and mobile networks</li>
+              <li>Support real-time monitoring and response coordination</li>
+              <li>Accurately identify and prioritize incidents using automated mechanisms</li>
+              <li>Provide location-based services, including nearby emergency facilities</li>
+              <li>Notify and coordinate multiple emergency responders efficiently</li>
+            </ul>
+          </div>
+          <div class="test">
+            <h4>Simulation Testing</h4>
+            <p>Simulated emergency scenarios assess the system&rsquo;s ability to:</p>
+            <ul>
+              <li>Receive and process emergency reports from citizens</li>
+              <li>Automatically prioritize incidents according to their reported conditions</li>
+              <li>Assign and coordinate appropriate responders</li>
+              <li>Provide real-time incident status updates and notifications</li>
+              <li>Track the reported incident location using GPS</li>
+              <li>Facilitate the overall coordination and response process during simulated emergency situations</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="tam">
+          <div class="tam-diagram" role="img" aria-label="Technology Acceptance Model: External Variables influence Perceived Usefulness and Perceived Ease of Use, which shape Attitude Toward Using, leading to Behavioral Intention to Use and then Actual System Use.">
+            <div class="tam-node">External Variables</div>
+            <div class="tam-arrow" aria-hidden="true"></div>
+            <div class="tam-pair">
+              <div class="tam-node">Perceived Usefulness</div>
+              <div class="tam-node">Perceived Ease of Use</div>
+            </div>
+            <div class="tam-arrow" aria-hidden="true"></div>
+            <div class="tam-node">Attitude Toward Using</div>
+            <div class="tam-arrow" aria-hidden="true"></div>
+            <div class="tam-node">Behavioral Intention to Use</div>
+            <div class="tam-arrow" aria-hidden="true"></div>
+            <div class="tam-node tam-node-end">Actual System Use</div>
+          </div>
+          <figcaption><span class="fig-label">Figure 1.</span> User acceptance evaluation based on the Technology Acceptance Model (TAM).</figcaption>
+        </figure>
+
+        <h3 class="sub"><span class="sub-num">4.4</span>Resources and Technologies</h3>
+        <div class="prose">
+          <p>In this section, the relevant hardware, software applications, programming languages, frameworks, databases, platforms, and development tools that are used to create, test, and deploy the Smart Rescue system are described.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption><span class="fig-label">Table 1.</span> Software technologies used in Smart Rescue.</caption>
+            <thead>
+              <tr><th scope="col">Component</th><th scope="col">Technologies</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Mobile application (citizens and responders)</th><td>Flutter (Dart), Provider, Google Maps / flutter_map, Geolocator, Firebase Cloud Messaging</td></tr>
+              <tr><th scope="row">Web dashboard (MDRRMO)</th><td>React, Bootstrap, Leaflet with Leaflet.heat, Chart.js, jsPDF</td></tr>
+              <tr><th scope="row">Backend API and real-time server</th><td>Node.js, Express, Socket.IO, JSON Web Tokens</td></tr>
+              <tr><th scope="row">AI service (automated prioritization)</th><td>Python, FastAPI, spaCy (NLP), OpenAI CLIP / PyTorch and TensorFlow (computer vision)</td></tr>
+              <tr><th scope="row">Database</th><td>PostgreSQL with PostGIS</td></tr>
+              <tr><th scope="row">External services</th><td>Google Maps Platform, Cloudinary, Firebase, Twilio (SMS)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="features" class="section" aria-labelledby="features-h">
+        <header class="section-head">
+          <span class="section-num">05</span>
+          <h2 id="features-h">System Features</h2>
+        </header>
+
+        <h3 class="sub"><span class="sub-num">5.1</span>MDRRMO Web Dashboard</h3>
+
+        <article class="feature">
+          <div class="feature-text">
+            <h4>Secure web portal for the MDRRMO</h4>
+            <p>The MDRRMO web dashboard is protected by role-based accounts with secure login, giving dispatchers and administrators a single place to manage emergencies.</p>
+          </div>
+          <figure class="shot">
+            <a href="assets/screenshots/web-landing.jpg"><img src="assets/screenshots/web-landing.jpg" alt="Smart Rescue web portal landing page with the MDRRMO Santa Cruz seal, the title &quot;Smart Rescue: Emergency Response Management System&quot; and an Admin Login button." width="1440" height="900" loading="lazy" decoding="async"></a>
+            <figcaption><span class="fig-label">Figure 2.</span> Web portal landing page with administrator login.</figcaption>
+          </figure>
+        </article>
+
+        <article class="feature">
+          <div class="feature-text">
+            <h4>Command Center for real-time monitoring</h4>
+            <p>A live operations map of Santa Cruz, Laguna shows active incidents inside the official municipal boundary, together with live statistics, responder availability, current weather and a city-wide siren control.</p>
+          </div>
+          <figure class="shot">
+            <a href="assets/screenshots/web-command-center.jpg"><img src="assets/screenshots/web-command-center.jpg" alt="Command Center screen showing a map of Santa Cruz with incident markers inside a red boundary line, a live stats panel, a responders list, a weather card and an AI priority feed listing critical incidents." width="1440" height="1000" loading="lazy" decoding="async"></a>
+            <figcaption><span class="fig-label">Figure 3.</span> Command Center with the live incident map, responders panel, weather and AI priority feed.</figcaption>
+          </figure>
+        </article>
+
+        <article class="feature">
+          <div class="feature-text">
+            <h4>Automated incident prioritization</h4>
+            <p>Each report is analyzed automatically: natural language processing reads the description and computer vision checks the attached photo, then the system assigns a priority level (Critical, High, Medium or Low) so the most urgent incidents surface first.</p>
+          </div>
+          <figure class="shot">
+            <a href="assets/screenshots/web-incidents.jpg"><img src="assets/screenshots/web-incidents.jpg" alt="Incidents page listing emergency reports in a table with columns for type, description, location, priority (Critical, High), status, reporter and time." width="1440" height="900" loading="lazy" decoding="async"></a>
+            <figcaption><span class="fig-label">Figure 4.</span> Incident queue with automatically assigned priority levels and status.</figcaption>
+          </figure>
+        </article>
+
+        <article class="feature">
+          <div class="feature-text">
+            <h4>Duplicate report detection (case unification)</h4>
+            <p>Reports of the same emergency are merged automatically into a single case when they are within 20 meters, within 20 minutes and of the same incident type, so one incident is not dispatched twice.</p>
+          </div>
+          <ul class="criteria" aria-label="Case unification criteria">
+            <li><strong>&le; 20 m</strong><span>apart</span></li>
+            <li><strong>&le; 20 min</strong><span>apart</span></li>
+            <li><strong>Same</strong><span>incident type</span></li>
+          </ul>
+        </article>
+
+        <article class="feature">
+          <div class="feature-text">
+            <h4>Incident heatmap</h4>
+            <p>A heatmap shows where incidents are concentrated, with filters by time period, emergency type and priority.</p>
+          </div>
+          <figure class="shot">
+            <a href="assets/screenshots/web-heatmap.jpg"><img src="assets/screenshots/web-heatmap.jpg" alt="Incident Heatmap page with a map of Santa Cruz inside a red boundary, time-range buttons, emergency type and priority filters, a heatmap legend and incident counts by type." width="1440" height="900" loading="lazy" decoding="async"></a>
+            <figcaption><span class="fig-label">Figure 5.</span> Incident heatmap with time, type and priority filters.</figcaption>
+          </figure>
+        </article>
+
+        <article class="feature">
+          <div class="feature-text">
+            <h4>Real-time chat and notifications</h4>
+            <p>Dispatchers and reporting citizens communicate through incident-based real-time chat, while push notifications and alert sirens announce new incidents.</p>
+          </div>
+          <figure class="shot">
+            <a href="assets/screenshots/web-chat.jpg"><img src="assets/screenshots/web-chat.jpg" alt="Centralized Realtime Chat page listing incident conversations with their type, status and time." width="1440" height="900" loading="lazy" decoding="async"></a>
+            <figcaption><span class="fig-label">Figure 6.</span> Centralized real-time chat organized by incident.</figcaption>
+          </figure>
+        </article>
+
+        <article class="feature">
+          <div class="feature-text">
+            <h4>Analytics and report generation</h4>
+            <p>Dashboards summarize daily cases, response times and priority distribution, and Daily Situation Reports can be generated and exported as PDF.</p>
+          </div>
+          <figure class="shot">
+            <a href="assets/screenshots/web-analytics.jpg"><img src="assets/screenshots/web-analytics.jpg" alt="Analytics and Reports page with summary cards for today's cases, active incidents and average arrival and resolution times, a monthly incident trend chart and a priority distribution chart." width="1440" height="900" loading="lazy" decoding="async"></a>
+            <figcaption><span class="fig-label">Figure 7.</span> Analytics dashboard with case counts, response times and priority distribution.</figcaption>
+          </figure>
+          <figure class="shot">
+            <a href="assets/screenshots/web-situation-report.jpg"><img src="assets/screenshots/web-situation-report.jpg" alt="Daily Situation Report page with date range buttons, team and shift filters, and Select Incidents and Generate All buttons." width="1440" height="900" loading="lazy" decoding="async"></a>
+            <figcaption><span class="fig-label">Figure 8.</span> Daily Situation Report generator with date, team and shift filters.</figcaption>
+          </figure>
+        </article>
+
+        <h3 class="sub"><span class="sub-num">5.2</span>Mobile Application</h3>
+
+        <article class="feature">
+          <div class="feature-text">
+            <h4>GPS-based mobile emergency reporting with photo upload</h4>
+            <p>Citizens report emergencies from the mobile app with their GPS location and a photo as evidence. AI description suggestions help them write a clear, complete report quickly.</p>
+          </div>
+          <div class="phones">
+            <figure class="shot shot-phone">
+              <a href="assets/screenshots/mobile-home.jpg"><img src="assets/screenshots/mobile-home.jpg" alt="Smart Rescue mobile home screen greeting the user, showing an &quot;Inside Santa Cruz (MDRRMO Active)&quot; location badge, quick actions for hotlines and safety tips, the MDRRMO emergency hotline and an Emergency Report button." width="720" height="1290" loading="lazy" decoding="async"></a>
+              <figcaption><span class="fig-label">Figure 9.</span> Citizen home screen with hotlines, safety tips and the Emergency Report button.</figcaption>
+            </figure>
+            <figure class="shot shot-phone">
+              <a href="assets/screenshots/mobile-report.jpg"><img src="assets/screenshots/mobile-report.jpg" alt="Mobile Report Emergency form with Fire selected as the emergency type, a list of AI-suggested descriptions, a filled description field and a photo evidence area." width="720" height="1603" loading="lazy" decoding="async"></a>
+              <figcaption><span class="fig-label">Figure 10.</span> Report form with emergency type, AI description suggestions and required photo evidence.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-text">
+            <h4>Report tracking and responder coordination</h4>
+            <p>Citizens can follow the status and priority of every report they have submitted. Dispatchers assign incidents to on-duty responders, who receive them in the responder app and update their progress from the field.</p>
+          </div>
+          <div class="phones">
+            <figure class="shot shot-phone">
+              <a href="assets/screenshots/mobile-my-reports.jpg"><img src="assets/screenshots/mobile-my-reports.jpg" alt="Mobile My Reports list showing fire, medical emergency and peace and order reports with priority and status labels such as Medium, High, Pending, Resolved and Referred." width="720" height="1603" loading="lazy" decoding="async"></a>
+              <figcaption><span class="fig-label">Figure 11.</span> My Reports screen showing each report&rsquo;s priority and status.</figcaption>
+            </figure>
+            <figure class="shot shot-phone">
+              <a href="assets/screenshots/mobile-responder.jpg"><img src="assets/screenshots/mobile-responder.jpg" alt="Responder mobile home screen showing two assigned incidents, a High priority medical emergency and a Critical fire, both marked Responding." width="720" height="1603" loading="lazy" decoding="async"></a>
+              <figcaption><span class="fig-label">Figure 12.</span> Responder app listing assigned incidents with priority and status.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature-text">
+            <h4>Location-based services and emergency facilities</h4>
+            <p>Reports are checked against the Santa Cruz municipal boundary, and users can view nearby emergency facilities such as evacuation centers and hospitals.</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="links" class="section" aria-labelledby="links-h">
+        <header class="section-head">
+          <span class="section-num">06</span>
+          <h2 id="links-h">Project Links</h2>
+        </header>
+        <ul class="link-list">
+          <li>
+            <a href="https://idyllic-taffy-7282b6.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <span class="link-title">Download the Android App (APK)<span class="arrow" aria-hidden="true">&#8599;</span></span>
+              <span class="link-desc">Installable Android package of the Smart Rescue citizen and responder app.</span>
+              <span class="link-url">idyllic-taffy-7282b6.netlify.app</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://luigi-portfolio-delta.vercel.app/videos" target="_blank" rel="noopener noreferrer">
+              <span class="link-title">Watch the System Demo<span class="arrow" aria-hidden="true">&#8599;</span></span>
+              <span class="link-desc">Video walkthrough of the Smart Rescue web dashboard and mobile app.</span>
+              <span class="link-url">luigi-portfolio-delta.vercel.app/videos</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/DLuigiLao/smartrescue.github.io/blob/smartrescuegithubpages/docs/SYSTEM_MANUAL.md" target="_blank" rel="noopener noreferrer">
+              <span class="link-title">System Manual<span class="arrow" aria-hidden="true">&#8599;</span></span>
+              <span class="link-desc">Technical reference covering the system architecture, subsystems, database and API.</span>
+              <span class="link-url">github.com/DLuigiLao/smartrescue.github.io</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="site-footer">
+        <img src="assets/logos/lspu.png" alt="" width="256" height="256">
+        <div>
+          <p>Laguna State Polytechnic University &middot; College of Computer Studies &middot; Santa Cruz, Laguna</p>
+          <p>Bachelor of Science in Information Technology major in Web and Mobile Application Development</p>
+          <p>Smart Rescue &middot; &copy; <span id="footer-year">2026</span></p>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
